@@ -1,0 +1,10 @@
+<p>dos-work</p>
+
+<div ></div>
+
+<form action="" *ngIf="info.data$ | async as info">
+    <label for="">Nombre</label>
+    <input type="text" value="{{info?.name}}">
+    <label>Password</label>
+    <input type="text" value="{{info?.password}}">
+</form>

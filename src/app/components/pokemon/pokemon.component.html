@@ -1,0 +1,13 @@
+
+<div *ngIf="pokemon$ | async as pokemon" >
+    <label>{{pokemon | json}}</label>
+    <label>{{pokemon.name}}</label>
+    <ul *ngFor="let stat of pokemon.stats">
+        <li>{{stat.stat.name}}:{{stat.base_stat}}</li>
+    </ul>
+
+    <ul *ngFor="let sprite of pokemon.sprites">
+        <li>{{sprite.name}}</li>
+        <li><img [src]="sprite.img" style="height:120px;width:120px;"> </li>
+    </ul>
+</div>

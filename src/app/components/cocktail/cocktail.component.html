@@ -1,0 +1,14 @@
+
+<!--<div *ngIf="cocktailService.getCocktailRequest('margarita') | async as bebida">
+    {{bebida|json}}
+</div>
+-->
+<div *ngFor="let cocktail of cocktails">
+<label>{{cocktail.name}}</label>
+<br>
+<img [src]="cocktail.imgUrl" style="width:100px;height:100px">
+<ul *ngFor="let ingredient of cocktail.ingredients">
+    <li>{{ingredient}}</li>
+</ul>
+<hr>
+</div>
